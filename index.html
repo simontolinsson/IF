@@ -1,28 +1,39 @@
 <html>
     <head>
-        <script>
-        
-         var age = prompt("Ålder: "), film;
+        <script>   
+        var weather = prompt("Hur är vädret? regn, sol, snö?"), temp = prompt("Hur varmt är det (Celsius)?"), kläder;
             
-            if(age < 7){
-                film = "Pettsson och Findus";
-            }else if (age < 14){
-                film = "Frost";
-            }else if (age < 19){
-                film = "LoTR trilogy";
-            }else if (age < 25){
-                film = "Scream";
-            }else{
-                film = "Sjunde inseglet";
-            }
-            
-            
-            
-            alert("Rekommenderad film: " + film)
-        
+                if(weather == "sol" || weather == "Sol"){
+                if(temp < 20 && temp > 10){
+                    kläder = "Ta på dig en jacka!";
+                } else if (temp >= 20){
+                    kläder = "Dra till havet, vetja!";
+                 } else {
+                    kläder = "Stanna inne, om du inte vill frysa";
+                    } 
+                } 
+                else if(weather == "regn" || weather == "Regn"){
+                if(temp <= 10 && temp > 0){
+                    kläder = "Ta på dig en regnjacka!";
+                }else if (temp > 10){
+                        kläder = "Det räcker nog med ett paraply!";
+                        } else{
+                        kläder = "Det förvånar mig att det inte snöar";
+                        }
+                    }
+                else if(weather == "snö" || weather == "Snö"){
+                if(temp > 0){
+                    kläder = "Lite varmt för att snöa idag, tycker du inte det?";
+                } else {
+                    kläder = "Ta på dig flera lager av kläder!";
+                }
+                }
+                else {
+                    kläder = "Nu blev det något fel!";
+                }
+        alert(kläder);  
         </script>
     </head>
     <body>
-    
     </body>
 </html>
